@@ -9,9 +9,9 @@
     }
   ],
   "keywords": [
+    "tabular",
     "e-commerce services",
     "categorical",
-    "tabular",
     "brazil"
   ],
   "resources": [
@@ -95,11 +95,159 @@
     },
     {
       "path": "categorias.parquet",
-      "description": "One row per category (5,595): official Google id, parent id, level, leaf flag, names and full paths in Portuguese and English, top-level ancestor, URL slug (Parquet, typed)."
+      "description": "One row per category (5,595): official Google id, parent id, level, leaf flag, names and full paths in Portuguese and English, top-level ancestor, URL slug (Parquet, typed).",
+      "schema": {
+        "fields": [
+          {
+            "name": "google_id",
+            "description": "Official Google Product Taxonomy id, the value Merchant Center accepts in google_product_category. Primary key.",
+            "type": "integer"
+          },
+          {
+            "name": "parent_id",
+            "description": "google_id of the parent category; empty for the 21 top-level categories.",
+            "type": "integer"
+          },
+          {
+            "name": "level",
+            "description": "Depth in the tree, 1 (top level) to 7.",
+            "type": "integer"
+          },
+          {
+            "name": "is_leaf",
+            "description": "True when the category has no children (4,719 of 5,595).",
+            "type": "boolean"
+          },
+          {
+            "name": "child_count",
+            "description": "Number of direct children.",
+            "type": "integer"
+          },
+          {
+            "name": "name_pt",
+            "description": "Category name in Brazilian Portuguese (cleaned).",
+            "type": "string"
+          },
+          {
+            "name": "name_en",
+            "description": "Category name in English (en-US).",
+            "type": "string"
+          },
+          {
+            "name": "path_pt",
+            "description": "Full path in Portuguese, levels separated by \" > \".",
+            "type": "string"
+          },
+          {
+            "name": "path_en",
+            "description": "Full path in English, levels separated by \" > \".",
+            "type": "string"
+          },
+          {
+            "name": "top_level_id",
+            "description": "google_id of the top-level ancestor.",
+            "type": "integer"
+          },
+          {
+            "name": "top_level_pt",
+            "description": "Top-level ancestor name in Portuguese.",
+            "type": "string"
+          },
+          {
+            "name": "top_level_en",
+            "description": "Top-level ancestor name in English.",
+            "type": "string"
+          },
+          {
+            "name": "slug_pt",
+            "description": "URL path built from the Portuguese path (casa-e-jardim/decoracao/fragrancias-domesticas/velas). Unique.",
+            "type": "string"
+          },
+          {
+            "name": "legacy_id",
+            "description": "Id used by the author's SQL Server table (idTaxonomiaRaw), kept to join older datasets.",
+            "type": "integer"
+          }
+        ]
+      }
     },
     {
       "path": "categorias.json",
-      "description": "One row per category (5,595): official Google id, parent id, level, leaf flag, names and full paths in Portuguese and English, top-level ancestor, URL slug (JSON)."
+      "description": "One row per category (5,595): official Google id, parent id, level, leaf flag, names and full paths in Portuguese and English, top-level ancestor, URL slug (JSON).",
+      "schema": {
+        "fields": [
+          {
+            "name": "google_id",
+            "description": "Official Google Product Taxonomy id, the value Merchant Center accepts in google_product_category. Primary key.",
+            "type": "integer"
+          },
+          {
+            "name": "parent_id",
+            "description": "google_id of the parent category; empty for the 21 top-level categories.",
+            "type": "integer"
+          },
+          {
+            "name": "level",
+            "description": "Depth in the tree, 1 (top level) to 7.",
+            "type": "integer"
+          },
+          {
+            "name": "is_leaf",
+            "description": "True when the category has no children (4,719 of 5,595).",
+            "type": "boolean"
+          },
+          {
+            "name": "child_count",
+            "description": "Number of direct children.",
+            "type": "integer"
+          },
+          {
+            "name": "name_pt",
+            "description": "Category name in Brazilian Portuguese (cleaned).",
+            "type": "string"
+          },
+          {
+            "name": "name_en",
+            "description": "Category name in English (en-US).",
+            "type": "string"
+          },
+          {
+            "name": "path_pt",
+            "description": "Full path in Portuguese, levels separated by \" > \".",
+            "type": "string"
+          },
+          {
+            "name": "path_en",
+            "description": "Full path in English, levels separated by \" > \".",
+            "type": "string"
+          },
+          {
+            "name": "top_level_id",
+            "description": "google_id of the top-level ancestor.",
+            "type": "integer"
+          },
+          {
+            "name": "top_level_pt",
+            "description": "Top-level ancestor name in Portuguese.",
+            "type": "string"
+          },
+          {
+            "name": "top_level_en",
+            "description": "Top-level ancestor name in English.",
+            "type": "string"
+          },
+          {
+            "name": "slug_pt",
+            "description": "URL path built from the Portuguese path (casa-e-jardim/decoracao/fragrancias-domesticas/velas). Unique.",
+            "type": "string"
+          },
+          {
+            "name": "legacy_id",
+            "description": "Id used by the author's SQL Server table (idTaxonomiaRaw), kept to join older datasets.",
+            "type": "integer"
+          }
+        ]
+      }
     },
     {
       "path": "hierarquia.csv",
@@ -131,7 +279,31 @@
     },
     {
       "path": "hierarquia.parquet",
-      "description": "Closure table: one row per (category, ancestor) pair, 22,907 rows. Answers \"all descendants of X\" with a single join (Parquet, typed)."
+      "description": "Closure table: one row per (category, ancestor) pair, 22,907 rows. Answers \"all descendants of X\" with a single join (Parquet, typed).",
+      "schema": {
+        "fields": [
+          {
+            "name": "google_id",
+            "description": "Category.",
+            "type": "integer"
+          },
+          {
+            "name": "ancestor_id",
+            "description": "An ancestor of the category, or the category itself (distance 0).",
+            "type": "integer"
+          },
+          {
+            "name": "ancestor_level",
+            "description": "Level of the ancestor (1 = top level).",
+            "type": "integer"
+          },
+          {
+            "name": "distance",
+            "description": "Number of steps from the category up to the ancestor.",
+            "type": "integer"
+          }
+        ]
+      }
     },
     {
       "path": "arvore.json",

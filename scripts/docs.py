@@ -77,9 +77,12 @@ def kaggle(meta: dict, columns: list[dict]) -> dict:
         fields = [{"name": c["name"], "description": c["description_en"], "type": KAGGLE_TYPES[c["type"]]} for c in cols]
         stem = Path(table["file"]).stem
         resources.append({"path": table["file"], "description": table["description"], "schema": {"fields": fields}})
-        resources.append({"path": f"{stem}.parquet", "description": table["description"].rstrip(".") + " (Parquet, typed)."})
+        # Kaggle's usability score asks for column descriptions on every file, not only the CSV.
+        resources.append({"path": f"{stem}.parquet", "description": table["description"].rstrip(".") + " (Parquet, typed).",
+                          "schema": {"fields": fields}})
         if table.get("json"):
-            resources.append({"path": f"{stem}.json", "description": table["description"].rstrip(".") + " (JSON)."})
+            resources.append({"path": f"{stem}.json", "description": table["description"].rstrip(".") + " (JSON).",
+                              "schema": {"fields": fields}})
     for extra in meta.get("extra_resources", []):
         resources.append(extra)
     return {
@@ -104,7 +107,7 @@ def main() -> None:
     (ROOT / "docs" / "data-dictionary.md").write_text(dictionary(meta, columns, tables, "en"), encoding="utf-8")
     (ROOT / "docs" / "data-dictionary.pt-BR.md").write_text(dictionary(meta, columns, tables, "pt"), encoding="utf-8")
     (ROOT / "data" / "dataset-metadata.json").write_text(
-        json.dumps(kaggle(meta, columns), ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        json.dumps(kaggle(meta, columns), ensure_ascii=True, indent=2) + "\n", encoding="utf-8"
     )
     print("docs/data-dictionary*.md and data/dataset-metadata.json updated")
 
