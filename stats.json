@@ -1,0 +1,40 @@
+{
+  "dataset": "taxonomia-google-produtos-ptbr",
+  "google_taxonomy_version": "2021-09-21",
+  "categories": 5595,
+  "leaves": 4719,
+  "top_level": 21,
+  "by_level": {
+    "1": 21,
+    "2": 192,
+    "3": 1349,
+    "4": 2203,
+    "5": 1385,
+    "6": 397,
+    "7": 48
+  },
+  "closure_rows": 22907,
+  "by_top_level": {
+    "Casa e jardim": 1035,
+    "Artigos esportivos": 801,
+    "Ferragens": 522,
+    "Artes e entretenimento": 500,
+    "Eletrônicos": 418,
+    "Alimentos, bebidas e tabaco": 364,
+    "Saúde e beleza": 346,
+    "Vestuário e acessórios": 240,
+    "Veículos e peças": 230,
+    "Comercial e industrial": 224,
+    "Brinquedos e jogos": 174,
+    "Materiais de escritório": 166,
+    "Animais e suprimentos para animais de estimação": 125,
+    "Móveis": 121,
+    "Câmeras e óptica": 104,
+    "Infantil": 87,
+    "Adultos": 38,
+    "Software": 35,
+    "Mídia": 30,
+    "Malas e bolsas": 22,
+    "Material para cerimônias e eventos religiosos": 13
+  }
+}

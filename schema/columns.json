@@ -1,0 +1,164 @@
+[
+  {
+    "table": "categorias.csv",
+    "name": "google_id",
+    "type": "integer",
+    "description_en": "Official Google Product Taxonomy id, the value Merchant Center accepts in google_product_category. Primary key.",
+    "description_pt": "Id oficial da Google Product Taxonomy, o valor aceito pelo Merchant Center em google_product_category. Chave primária.",
+    "standard": "Google",
+    "origin": "Google"
+  },
+  {
+    "table": "categorias.csv",
+    "name": "parent_id",
+    "type": "integer",
+    "description_en": "google_id of the parent category; empty for the 21 top-level categories.",
+    "description_pt": "google_id da categoria pai; vazio nas 21 categorias de primeiro nível.",
+    "standard": "—",
+    "origin": "derived"
+  },
+  {
+    "table": "categorias.csv",
+    "name": "level",
+    "type": "integer",
+    "description_en": "Depth in the tree, 1 (top level) to 7.",
+    "description_pt": "Profundidade na árvore, de 1 (primeiro nível) a 7.",
+    "standard": "—",
+    "origin": "derived"
+  },
+  {
+    "table": "categorias.csv",
+    "name": "is_leaf",
+    "type": "boolean",
+    "description_en": "True when the category has no children (4,719 of 5,595).",
+    "description_pt": "Verdadeiro quando a categoria não tem filhas (4.719 de 5.595).",
+    "standard": "—",
+    "origin": "derived"
+  },
+  {
+    "table": "categorias.csv",
+    "name": "child_count",
+    "type": "integer",
+    "description_en": "Number of direct children.",
+    "description_pt": "Quantidade de filhas diretas.",
+    "standard": "—",
+    "origin": "derived"
+  },
+  {
+    "table": "categorias.csv",
+    "name": "name_pt",
+    "type": "string",
+    "description_en": "Category name in Brazilian Portuguese (cleaned).",
+    "description_pt": "Nome da categoria em português do Brasil (limpo).",
+    "standard": "Google",
+    "origin": "Google, cleaned"
+  },
+  {
+    "table": "categorias.csv",
+    "name": "name_en",
+    "type": "string",
+    "description_en": "Category name in English (en-US).",
+    "description_pt": "Nome da categoria em inglês (en-US).",
+    "standard": "Google",
+    "origin": "Google"
+  },
+  {
+    "table": "categorias.csv",
+    "name": "path_pt",
+    "type": "string",
+    "description_en": "Full path in Portuguese, levels separated by \" > \".",
+    "description_pt": "Caminho completo em português, níveis separados por \" > \".",
+    "standard": "Google",
+    "origin": "Google, cleaned"
+  },
+  {
+    "table": "categorias.csv",
+    "name": "path_en",
+    "type": "string",
+    "description_en": "Full path in English, levels separated by \" > \".",
+    "description_pt": "Caminho completo em inglês, níveis separados por \" > \".",
+    "standard": "Google",
+    "origin": "Google"
+  },
+  {
+    "table": "categorias.csv",
+    "name": "top_level_id",
+    "type": "integer",
+    "description_en": "google_id of the top-level ancestor.",
+    "description_pt": "google_id do ancestral de primeiro nível.",
+    "standard": "—",
+    "origin": "derived"
+  },
+  {
+    "table": "categorias.csv",
+    "name": "top_level_pt",
+    "type": "string",
+    "description_en": "Top-level ancestor name in Portuguese.",
+    "description_pt": "Nome do ancestral de primeiro nível em português.",
+    "standard": "—",
+    "origin": "derived"
+  },
+  {
+    "table": "categorias.csv",
+    "name": "top_level_en",
+    "type": "string",
+    "description_en": "Top-level ancestor name in English.",
+    "description_pt": "Nome do ancestral de primeiro nível em inglês.",
+    "standard": "—",
+    "origin": "derived"
+  },
+  {
+    "table": "categorias.csv",
+    "name": "slug_pt",
+    "type": "string",
+    "description_en": "URL path built from the Portuguese path (casa-e-jardim/decoracao/fragrancias-domesticas/velas). Unique.",
+    "description_pt": "Caminho de URL a partir do caminho em português (casa-e-jardim/decoracao/fragrancias-domesticas/velas). Único.",
+    "standard": "—",
+    "origin": "derived"
+  },
+  {
+    "table": "categorias.csv",
+    "name": "legacy_id",
+    "type": "integer",
+    "description_en": "Id used by the author's SQL Server table (idTaxonomiaRaw), kept to join older datasets.",
+    "description_pt": "Id da tabela SQL Server do autor (idTaxonomiaRaw), mantido para cruzar com bases antigas.",
+    "standard": "—",
+    "origin": "Caique Dourado"
+  },
+  {
+    "table": "hierarquia.csv",
+    "name": "google_id",
+    "type": "integer",
+    "description_en": "Category.",
+    "description_pt": "Categoria.",
+    "standard": "—",
+    "origin": "derived"
+  },
+  {
+    "table": "hierarquia.csv",
+    "name": "ancestor_id",
+    "type": "integer",
+    "description_en": "An ancestor of the category, or the category itself (distance 0).",
+    "description_pt": "Um ancestral da categoria, ou a própria categoria (distância 0).",
+    "standard": "—",
+    "origin": "derived"
+  },
+  {
+    "table": "hierarquia.csv",
+    "name": "ancestor_level",
+    "type": "integer",
+    "description_en": "Level of the ancestor (1 = top level).",
+    "description_pt": "Nível do ancestral (1 = primeiro nível).",
+    "standard": "—",
+    "origin": "derived"
+  },
+  {
+    "table": "hierarquia.csv",
+    "name": "distance",
+    "type": "integer",
+    "description_en": "Number of steps from the category up to the ancestor.",
+    "description_pt": "Quantidade de passos da categoria até o ancestral.",
+    "standard": "—",
+    "origin": "derived"
+  }
+]
