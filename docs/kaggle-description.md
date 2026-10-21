@@ -20,3 +20,5 @@ The taxonomy is the category tree Google Merchant Center accepts in `google_prod
 The pt-BR file has non-breaking spaces, trailing and double spaces, and one typo (`imâs`). They are fixed, documented and tested.
 
 Version 2021-09-21 (latest published by Google). Category names and ids © Google; structure, cleaning and derived columns by Caique Dourado (CC BY 4.0). Scripts, dictionary and quality report: **https://github.com/CaiqueDourado/taxonomia-google-produtos-ptbr**
+
+This taxonomy was used to classify the products of the Brazilian e-commerce product catalog (114.6 million offers from 7,179 stores): https://www.kaggle.com/datasets/caiquedourado/catalogo-produtos-ecommerce-brasil
