@@ -48,6 +48,17 @@ Usos típicos:
 
 ## Como foi construída
 
+```mermaid
+flowchart LR
+    A[Arquivos da taxonomia do Google<br/>pt-BR, en-US, 2021-09-21] --> B[(SQL Server<br/>taxonomias, 22.907 linhas)]
+    A --> C[scripts/build.py]
+    B --> C
+    C --> D[categorias.*<br/>adjacência + caminhos]
+    C --> E[hierarquia.*<br/>tabela de fechamento]
+    C --> F[arvore.json<br/>árvore aninhada]
+    D --> G[scripts/validate.py · CI]
+```
+
 O Google publica a taxonomia como um arquivo de texto por idioma ([documentação](https://support.google.com/merchants/answer/6324436)). O autor carregou o arquivo em português no SQL Server, anos atrás, para classificar produtos coletados de lojas brasileiras. A tabela tinha uma linha por nível de cada caminho, sem o id do Google e sem o pai.
 
 Este repositório volta aos arquivos oficiais em português e inglês. Ele:

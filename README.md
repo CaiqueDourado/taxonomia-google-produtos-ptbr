@@ -59,6 +59,17 @@ Typical uses:
 
 ## How it was built
 
+```mermaid
+flowchart LR
+    A[Google taxonomy files<br/>pt-BR, en-US, 2021-09-21] --> B[(SQL Server<br/>taxonomias, 22,907 rows)]
+    A --> C[scripts/build.py]
+    B --> C
+    C --> D[categorias.*<br/>adjacency + paths]
+    C --> E[hierarquia.*<br/>closure table]
+    C --> F[arvore.json<br/>nested tree]
+    D --> G[scripts/validate.py · CI]
+```
+
 Google publishes the taxonomy as one plain-text file per language ([documentation](https://support.google.com/merchants/answer/6324436)). The author loaded the Portuguese file into SQL Server years ago to classify products crawled from Brazilian stores. That table had one row per path level, with no Google id and no parent.
 
 This repository goes back to the official files in Portuguese and English. It:
