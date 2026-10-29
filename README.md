@@ -18,6 +18,12 @@
 
 Google taxonomy version **2021-09-21** (the latest published) · 21 top-level categories · up to 7 levels · 4,719 leaves.
 
+## How a category is structured
+
+![Panelas e assadeiras as one nested JSON record](docs/img/category-json.png)
+
+The three files join on `google_id`. Put together for **Panelas e assadeiras** (Cookware & Bakeware, id 6070): its names and path from `categorias`, its two ancestors and its 43 descendants (38 of them leaves) from `hierarquia`, and its 5 children with their own children from `arvore.json`. Full record: [docs/example-category.json](docs/example-category.json), built by [scripts/make_json.py](scripts/make_json.py) (`python scripts/make_json.py 3329` for any other id).
+
 ## Preview
 
 | google_id | parent_id | level | is_leaf | name_pt | name_en | slug_pt |

@@ -1,0 +1,315 @@
+{
+  "google_id": 6070,
+  "names": {
+    "pt": "Panelas e assadeiras",
+    "en": "Cookware & Bakeware"
+  },
+  "path": {
+    "pt": "Casa e jardim > Produtos de cozinha e aparelhos de jantar > Panelas e assadeiras",
+    "en": "Home & Garden > Kitchen & Dining > Cookware & Bakeware"
+  },
+  "level": 3,
+  "is_leaf": false,
+  "slug_pt": "casa-e-jardim/produtos-de-cozinha-e-aparelhos-de-jantar/panelas-e-assadeiras",
+  "legacy_id": 3290,
+  "top_level": {
+    "google_id": 536,
+    "name_pt": "Casa e jardim",
+    "name_en": "Home & Garden"
+  },
+  "parent": {
+    "google_id": 638,
+    "level": 2,
+    "name_pt": "Produtos de cozinha e aparelhos de jantar",
+    "name_en": "Kitchen & Dining"
+  },
+  "ancestors": [
+    {
+      "google_id": 536,
+      "level": 1,
+      "name_pt": "Casa e jardim",
+      "name_en": "Home & Garden"
+    },
+    {
+      "google_id": 638,
+      "level": 2,
+      "name_pt": "Produtos de cozinha e aparelhos de jantar",
+      "name_en": "Kitchen & Dining"
+    }
+  ],
+  "descendants": {
+    "total": 43,
+    "leaves": 38
+  },
+  "child_count": 5,
+  "children": [
+    {
+      "google_id": 4502,
+      "name_pt": "Acessórios para assadeiras",
+      "name_en": "Bakeware Accessories",
+      "is_leaf": false,
+      "children": [
+        {
+          "google_id": 7131,
+          "name_pt": "Pesos para assar",
+          "name_en": "Baking Weights",
+          "is_leaf": true
+        },
+        {
+          "google_id": 4503,
+          "name_pt": "Protetores e forminhas para confeitaria",
+          "name_en": "Baking Mats & Liners",
+          "is_leaf": true
+        },
+        {
+          "google_id": 4726,
+          "name_pt": "Tábua para assadeira de carnes",
+          "name_en": "Roasting Pan Racks",
+          "is_leaf": true
+        }
+      ]
+    },
+    {
+      "google_id": 4424,
+      "name_pt": "Acessórios para conjunto de panelas",
+      "name_en": "Cookware Accessories",
+      "is_leaf": false,
+      "children": [
+        {
+          "google_id": 4501,
+          "name_pt": "Acessórios para panela de pressão e conservas",
+          "name_en": "Pressure Cooker & Canner Accessories",
+          "is_leaf": true
+        },
+        {
+          "google_id": 4427,
+          "name_pt": "Acessórios para wok",
+          "name_en": "Wok Accessories",
+          "is_leaf": false,
+          "children": [
+            {
+              "google_id": 4662,
+              "name_pt": "Anéis para wok",
+              "name_en": "Wok Rings",
+              "is_leaf": true
+            },
+            {
+              "google_id": 4663,
+              "name_pt": "Escovas para wok",
+              "name_en": "Wok Brushes",
+              "is_leaf": true
+            }
+          ]
+        },
+        {
+          "google_id": 4661,
+          "name_pt": "Cabos para panelas",
+          "name_en": "Pot & Pan Handles",
+          "is_leaf": true
+        },
+        {
+          "google_id": 4529,
+          "name_pt": "Cestas para cozimento a vapor",
+          "name_en": "Steamer Baskets",
+          "is_leaf": true
+        },
+        {
+          "google_id": 4660,
+          "name_pt": "Tampas para panelas",
+          "name_en": "Pot & Pan Lids",
+          "is_leaf": true
+        }
+      ]
+    },
+    {
+      "google_id": 640,
+      "name_pt": "Assadeiras",
+      "name_en": "Bakeware",
+      "is_leaf": false,
+      "children": [
+        {
+          "google_id": 4764,
+          "name_pt": "Conjuntos para assadeiras",
+          "name_en": "Bakeware Sets",
+          "is_leaf": true
+        },
+        {
+          "google_id": 643,
+          "name_pt": "Formas e moldes para bolos",
+          "name_en": "Cake Pans & Molds",
+          "is_leaf": true
+        },
+        {
+          "google_id": 648,
+          "name_pt": "Formas para assar",
+          "name_en": "Roasting Pans",
+          "is_leaf": true
+        },
+        {
+          "google_id": 644,
+          "name_pt": "Formas para muffins e bolos pequenos",
+          "name_en": "Muffin & Pastry Pans",
+          "is_leaf": true
+        },
+        {
+          "google_id": 642,
+          "name_pt": "Formas para pães",
+          "name_en": "Bread Pans & Molds",
+          "is_leaf": true
+        },
+        {
+          "google_id": 2843,
+          "name_pt": "Formas para pizza",
+          "name_en": "Pizza Pans",
+          "is_leaf": true
+        },
+        {
+          "google_id": 645,
+          "name_pt": "Formas para tortas e quiches",
+          "name_en": "Pie & Quiche Pans",
+          "is_leaf": true
+        },
+        {
+          "google_id": 6756,
+          "name_pt": "Grelhas de forno",
+          "name_en": "Broiling Pans",
+          "is_leaf": true
+        },
+        {
+          "google_id": 646,
+          "name_pt": "Pedras para pizza",
+          "name_en": "Pizza Stones",
+          "is_leaf": true
+        },
+        {
+          "google_id": 647,
+          "name_pt": "Pratos para ramequin e suflê",
+          "name_en": "Ramekins & Souffle Dishes",
+          "is_leaf": true
+        },
+        {
+          "google_id": 641,
+          "name_pt": "Travessas para assar",
+          "name_en": "Baking & Cookie Sheets",
+          "is_leaf": true
+        }
+      ]
+    },
+    {
+      "google_id": 6071,
+      "name_pt": "Conjuntos de panelas e assadeiras",
+      "name_en": "Cookware & Bakeware Combo Sets",
+      "is_leaf": true
+    },
+    {
+      "google_id": 654,
+      "name_pt": "Panelas",
+      "name_en": "Cookware",
+      "is_leaf": false,
+      "children": [
+        {
+          "google_id": 6518,
+          "name_pt": "Barril de fermentação e conserva",
+          "name_en": "Fermentation & Pickling Crocks",
+          "is_leaf": true
+        },
+        {
+          "google_id": 655,
+          "name_pt": "Caçarolas",
+          "name_en": "Casserole Dishes",
+          "is_leaf": true
+        },
+        {
+          "google_id": 662,
+          "name_pt": "Caçarolas e fritadeiras",
+          "name_en": "Skillets & Frying Pans",
+          "is_leaf": true
+        },
+        {
+          "google_id": 663,
+          "name_pt": "Caldeirões",
+          "name_en": "Stock Pots",
+          "is_leaf": true
+        },
+        {
+          "google_id": 659,
+          "name_pt": "Chaleiras",
+          "name_en": "Stovetop Kettles",
+          "is_leaf": true
+        },
+        {
+          "google_id": 4721,
+          "name_pt": "Conjuntos de panelas",
+          "name_en": "Cookware Sets",
+          "is_leaf": true
+        },
+        {
+          "google_id": 658,
+          "name_pt": "Fritadeiras e grelhas",
+          "name_en": "Griddles & Grill Pans",
+          "is_leaf": true
+        },
+        {
+          "google_id": 657,
+          "name_pt": "Panelas de ferro",
+          "name_en": "Dutch Ovens",
+          "is_leaf": true
+        },
+        {
+          "google_id": 660,
+          "name_pt": "Panelas de pressão e conservas",
+          "name_en": "Pressure Cookers & Canners",
+          "is_leaf": true
+        },
+        {
+          "google_id": 656,
+          "name_pt": "Panelas para banho-maria",
+          "name_en": "Double Boilers",
+          "is_leaf": true
+        },
+        {
+          "google_id": 6838,
+          "name_pt": "Panelas para crepe",
+          "name_en": "Crêpe & Blini Pans",
+          "is_leaf": true
+        },
+        {
+          "google_id": 661,
+          "name_pt": "Panelas para molho",
+          "name_en": "Saucepans",
+          "is_leaf": true
+        },
+        {
+          "google_id": 4459,
+          "name_pt": "Panelas para paellas",
+          "name_en": "Paella Pans",
+          "is_leaf": true
+        },
+        {
+          "google_id": 4423,
+          "name_pt": "Panelas para sauté",
+          "name_en": "Sauté Pans",
+          "is_leaf": true
+        },
+        {
+          "google_id": 5110,
+          "name_pt": "Prensas para grelhar",
+          "name_en": "Grill Presses",
+          "is_leaf": true
+        },
+        {
+          "google_id": 5340,
+          "name_pt": "Tagines",
+          "name_en": "Tagines & Clay Cooking Pots",
+          "is_leaf": true
+        },
+        {
+          "google_id": 664,
+          "name_pt": "Woks",
+          "name_en": "Woks",
+          "is_leaf": true
+        }
+      ]
+    }
+  ]
+}

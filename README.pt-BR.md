@@ -17,6 +17,12 @@
 
 Versão **2021-09-21** (a mais recente publicada pelo Google) · 21 categorias de primeiro nível · até 7 níveis · 4.719 folhas.
 
+## Como uma categoria é estruturada
+
+![Panelas e assadeiras como um registro JSON aninhado](docs/img/category-json.png)
+
+Os três arquivos se ligam pelo `google_id`. Juntando tudo para **Panelas e assadeiras** (Cookware & Bakeware, id 6070): nomes e caminho de `categorias`, os dois ancestrais e os 43 descendentes (38 deles folhas) de `hierarquia`, e as 5 categorias filhas com as suas próprias filhas de `arvore.json`. Registro completo: [docs/example-category.json](docs/example-category.json), gerado por [scripts/make_json.py](scripts/make_json.py) (`python scripts/make_json.py 3329` para qualquer outro id).
+
 ## Prévia
 
 | google_id | parent_id | level | is_leaf | name_pt | name_en | slug_pt |

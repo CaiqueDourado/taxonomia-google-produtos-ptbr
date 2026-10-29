@@ -8,6 +8,12 @@ The taxonomy is the category tree Google Merchant Center accepts in `google_prod
 - `hierarquia.csv` / `.parquet`: closure table with 22,907 (category, ancestor) pairs. "All descendants of X" is a single join in any SQL database.
 - `arvore.json`: nested tree for menus and category pickers.
 
+## How a category is structured
+
+![Panelas e assadeiras as one nested JSON record](https://raw.githubusercontent.com/CaiqueDourado/taxonomia-google-produtos-ptbr/main/docs/img/category-json.png)
+
+The three files join on `google_id`. Put together for **Panelas e assadeiras** (Cookware & Bakeware, id 6070): its names and path from `categorias`, its two ancestors and its 43 descendants (38 of them leaves) from `hierarquia`, and its 5 children with their own children from `arvore.json`. Full record: [docs/example-category.json](https://github.com/CaiqueDourado/taxonomia-google-produtos-ptbr/blob/main/docs/example-category.json), built by [scripts/make_json.py](https://github.com/CaiqueDourado/taxonomia-google-produtos-ptbr/blob/main/scripts/make_json.py).
+
 ## Use cases
 
 - Map product feeds to Google Shopping in Brazil.
